@@ -12,11 +12,7 @@ test('Check health', () => {
     { name: 'лучник', health: 80 },
     { name: 'мечник', health: 10 },
   ];
-  try {
-    expect(sortChars(charsToTest)).toBe(expected);
-  } catch (e) {
-    // eslint-disable-next-line no-console
-    console.log(e);
-    expect(sortChars(charsToTest)).toEqual(expected);
-  }
+
+  expect(sortChars(charsToTest)).not.toBe(expected);
+  expect(sortChars(charsToTest)).toEqual(expected);
 });
