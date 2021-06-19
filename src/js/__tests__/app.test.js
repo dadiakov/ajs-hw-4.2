@@ -12,6 +12,10 @@ test('Check health', () => {
     { name: 'лучник', health: 80 },
     { name: 'мечник', health: 10 },
   ];
-
-  expect(sortChars(charsToTest)).toEqual(expected);
+  try {
+    expect(sortChars(charsToTest)).toBe(expected);
+  } catch (e) {
+    console.log(e);
+    expect(sortChars(charsToTest)).toEqual(expected);
+  }
 });
