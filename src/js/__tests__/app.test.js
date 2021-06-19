@@ -15,6 +15,7 @@ test('Check health', () => {
   try {
     expect(sortChars(charsToTest)).toBe(expected);
   } catch (e) {
+    // eslint-disable-next-line no-console
     console.log(e);
     expect(sortChars(charsToTest)).toEqual(expected);
   }
